@@ -47,7 +47,16 @@ namespace ConsoleApp2.Menu
                         break;
 
                     case "2":
-                        Dal.GetAllAgents();
+                        var list = Dal.GetAllAgents();
+                        foreach (var Theagent in list)
+                        {
+                            Console.WriteLine(Theagent.id);
+                            Console.WriteLine(Theagent.codeName);
+                            Console.WriteLine(Theagent.realName);
+                            Console.WriteLine(Theagent.status);
+                            Console.WriteLine(Theagent.location);
+                            Console.WriteLine(Theagent.missionCompleted);
+                        }
                         break;
 
                     case "3":

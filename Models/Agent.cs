@@ -16,9 +16,17 @@ namespace ConsoleApp2.Models
         public string status { get; }
         public int missionCompleted { get; }
 
-        public Agent(int id, string codeName, string realName, string location, string status, int missionCompleted)
+        public Agent(int id,string codeName, string realName, string location, string status, int missionCompleted)
         {
             this.id = id;
+            this.codeName = codeName;
+            this.realName = realName;
+            this.location = location;
+            this.status = status;
+            this.missionCompleted = missionCompleted;
+        }
+        public Agent(string codeName, string realName, string location, string status, int missionCompleted)
+        {
             this.codeName = codeName;
             this.realName = realName;
             this.location = location;

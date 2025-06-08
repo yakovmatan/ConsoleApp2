@@ -42,12 +42,11 @@ namespace ConsoleApp2.DAL
 
         public void AddAgent(Agent agent)
         {
-            string query = @"INSERT INTO agents (id, codeName, realName, location, status, missionCompleted)
-                     VALUES (@id, @codeName, @realName, @location, @status, @missionCompleted)";
+            string query = @"INSERT INTO agents (codeName, realName, location, status, missionCompleted)
+                     VALUES (@codeName, @realName, @location, @status, @missionCompleted)";
             try
             {
                 var cmd = this.Command(query);
-                cmd.Parameters.AddWithValue("@id", agent.id);
                 cmd.Parameters.AddWithValue("@codeName", agent.codeName);
                 cmd.Parameters.AddWithValue("@realName", agent.realName);
                 cmd.Parameters.AddWithValue("@location", agent.location);
@@ -60,6 +59,7 @@ namespace ConsoleApp2.DAL
                 Console.WriteLine("Error adding agent: " + ex.Message);
             }
         }
+
 
 
         public List<Agent> GetAllAgents()
