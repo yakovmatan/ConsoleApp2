@@ -27,6 +27,11 @@ namespace ConsoleApp2.DAL
             Console.WriteLine("connection success");
         }
 
+        public void Close()
+        {
+            Conn.Close();
+        }
+
         public MySqlCommand Command(string query)
         {
             MySqlCommand cmd = new MySqlCommand(query, this.Conn);
