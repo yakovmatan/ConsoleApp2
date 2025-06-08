@@ -12,7 +12,7 @@ namespace ConsoleApp2.Models
         public Agent Create()
         {
             num++;
-            Agent agent = new Agent(num, $"carot{num}", $"yakov{num}", $"galil{num}", "Active", num);
+            Agent agent = new Agent(num, $"carot{num}", $"yakov{num}", $"galil{num}", "active", num);
             return agent;
         }
     }
