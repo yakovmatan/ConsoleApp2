@@ -44,6 +44,7 @@ namespace ConsoleApp2.Menu
                     case "1":
                         Agent agent = this.agent.Create();
                         Dal.AddAgent(agent);
+                        Console.WriteLine("The agent was added succcessfully");
                         break;
 
                     case "2":
@@ -78,6 +79,7 @@ namespace ConsoleApp2.Menu
                         Console.WriteLine("enter new location");
                         string location = Console.ReadLine();
                         Dal.UpdateAgentLocation(agentId, location);
+                        Console.WriteLine("the agent was successfully update");
                         break;
 
                     case "4":
@@ -97,6 +99,7 @@ namespace ConsoleApp2.Menu
                             }
                         }
                         Dal.DeleteAgent(Id);
+                        Console.WriteLine("the agent was successfully deleted");
                         break;
 
                     default:
