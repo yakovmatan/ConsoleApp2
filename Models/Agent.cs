@@ -7,16 +7,16 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp2.Models
 {
-    internal class Agents
+    internal class Agent
     {
-        private int id;
-        private string codeName;
-        private string realName;
-        private string location;
-        private string status;
-        private int missiionCompleted;
+        public int id { get; }
+        public string codeName { get; }
+        public string realName { get; }
+        public string location { get; }
+        public string status { get; }
+        public int missiionCompleted { get; }
 
-        public Agents(int id, string codeName, string realName, string location, string status, int missiionCompleted)
+        public Agent(int id, string codeName, string realName, string location, string status, int missiionCompleted)
         {
             this.id = id;
             this.codeName = codeName;
