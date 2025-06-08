@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using ConsoleApp2.DAL;
+using ConsoleApp2.Menu;
 using ConsoleApp2.Models;
 
 namespace Agents
@@ -13,6 +14,8 @@ namespace Agents
         
         static void Main(string[] args)
         {
+            Menu menu = new Menu();
+            menu.Choose();
         }
     }
 }

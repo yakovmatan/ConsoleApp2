@@ -68,7 +68,7 @@ namespace ConsoleApp2.Menu
                         }
                         Console.WriteLine("enter new location");
                         string location = Console.ReadLine();
-                        Dal.UpdateAgentLocation(agentId,location);
+                        Dal.UpdateAgentLocation(agentId, location);
                         break;
 
                     case "4":
@@ -93,7 +93,7 @@ namespace ConsoleApp2.Menu
                     default:
                         Console.WriteLine("Invalid choice. Please try again.");
                         break;
-
+                }
             }
         }
     }
